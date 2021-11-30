@@ -10,6 +10,8 @@ El backend se desarrollo en node usando express.
 Se desplego a heroku usando contenedores para que sea tratado como un microservicio
 Se habilito cors exclusivamente para el frontend
 
+El calculo de la esperanza de vida esta basado en [https://www.bbc.com/mundo/noticias-44124466](https://www.bbc.com/mundo/noticias-44124466)
+
 Falta validar los datos que se envian, como solo texto y requeridos
 
 [Mas informacion](https://devcenter.heroku.com/categories/deploying-with-docker)
