@@ -9,7 +9,7 @@ import {
 
 import { FIREBASE } from '../config'
 
-const debug = Debug('FirestoreDB')
+const debug = Debug('app:FirestoreDB')
 
 class FirestoreDB {
   async connect () {

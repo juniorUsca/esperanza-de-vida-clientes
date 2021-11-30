@@ -23,7 +23,7 @@ const kpiRepository = new KpiRepository()
  * @param {next} next
  */
 export const createClient = async (req, res, next) => {
-  const debug = Debug(`CreateClient ${req.idTrx}`)
+  const debug = Debug(`app:CreateClient ${req.idTrx}`)
   try {
     debug('starterData: %o', req.body)
     const executeCreateClient = CreateClient({
@@ -47,7 +47,7 @@ export const createClient = async (req, res, next) => {
  * @param {next} next
  */
 export const getAllClients = async (req, res, next) => {
-  const debug = Debug(`GetAllClients ${req.idTrx}`)
+  const debug = Debug(`app:GetAllClients ${req.idTrx}`)
   try {
     debug('starterData: %o', req.body)
     const executeGetAllClients = GetAllClients({ clientRepository })
@@ -68,7 +68,7 @@ export const getAllClients = async (req, res, next) => {
  * @param {next} next
  */
 export const getKpis = async (req, res, next) => {
-  const debug = Debug(`GetKpis ${req.idTrx}`)
+  const debug = Debug(`app:GetKpis ${req.idTrx}`)
   try {
     debug('starterData: %o', req.body)
     const executeGetKpis = GetKpis({ kpiRepository })

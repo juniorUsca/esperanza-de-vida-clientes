@@ -1,7 +1,7 @@
 import Debug from 'debug'
 import { DateTime } from 'luxon'
 
-const debug = Debug('CreateClient')
+const debug = Debug('app:CreateClient')
 /**
  * @typedef {object} Data
  * @property {string} nombre

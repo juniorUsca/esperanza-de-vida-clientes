@@ -5,8 +5,8 @@
   "private": "true",
   "type": "module",
   "scripts": {
-    "start": "node --experimental-json-modules --experimental-specifier-resolution=node  src/index.js",
-    "dev": "nodemon --experimental-json-modules --experimental-specifier-resolution=node  src/index.js",
+    "start": "DEBUG=app,app:* node --experimental-json-modules --experimental-specifier-resolution=node  src/index.js",
+    "dev": "DEBUG=app,app:* nodemon --experimental-json-modules --experimental-specifier-resolution=node  src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
