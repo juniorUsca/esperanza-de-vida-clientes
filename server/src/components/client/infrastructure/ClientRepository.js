@@ -34,6 +34,9 @@ export default class ClientRepository {
     })).map(client => ({
       ...client,
       ...client.fechaNacimiento && { fechaNacimiento: client.fechaNacimiento.toDate() },
+      ...client.fechaEstimadaFallecimiento && {
+        fechaEstimadaFallecimiento: client.fechaEstimadaFallecimiento.toDate(),
+      },
     }))
     return clients
   }

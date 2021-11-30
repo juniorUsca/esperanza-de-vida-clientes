@@ -15,5 +15,6 @@ export default ({ clientRepository }) => async () => {
     nombre: client.nombre,
     apellido: client.apellido,
     fechaNacimiento: DateTime.fromJSDate(client.fechaNacimiento).toFormat('yyyy-LL-dd'),
+    fechaEstimadaFallecimiento: DateTime.fromJSDate(client.fechaEstimadaFallecimiento).toFormat('yyyy-LL-dd'),
   }))
 }

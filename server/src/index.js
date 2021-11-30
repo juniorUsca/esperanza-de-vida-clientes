@@ -1,22 +1,5 @@
 import express from 'express'
-// import { initializeApp, applicationDefault, cert } from 'firebase-admin/app'
-// import { getFirestore, Timestamp, FieldValue } from 'firebase-admin/firestore'
-
-// import serviceAccount from '../smp-clientes-firebase-adminsdk-sexrs-05e9067a4d.json'
-
-// initializeApp({
-//   credential: cert(serviceAccount)
-// });
-
-// const db = getFirestore();
-
-// const docRef = db.collection('users').doc('alovelace');
-
-// docRef.set({
-//   first: 'Adaa',
-//   last: 'Lovelace',
-//   born: 1815
-// });
+import cors from 'cors'
 
 import contextHandler from './utils/middlewares/contextHandler'
 import morganHandler from './utils/middlewares/morganHandler'
@@ -32,6 +15,12 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(contextHandler)
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://smp-clientes.web.app',
+  ],
+}))
 app.use(morganHandler)
 
 app.use('/api/', clientApi)
